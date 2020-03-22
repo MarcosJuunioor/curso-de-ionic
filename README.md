@@ -16,3 +16,9 @@ Caso não estejam, podem ser obtidos da seguinte forma:
 - NodeJS: baixar no próprio site e depois instalar normalmente (link:https://nodejs.org/en/). O NodeJS já possui o npm.
 - Ionic: executar o comando **npm install -g @ionic/cli**
 - Cordova: npm install -g cordova
+
+## Criando um projeto com o Ionic
+Comando: **ionic start nome-do-projeto [opção]** <br>
+Há três opções de templates para projetos: blank, tabs e sidemenu.
+
+Para testar o aplicativo, deve-se navegar até a pasta do projeto e executar o comando "ionic serve".
