@@ -8,4 +8,11 @@ O Ionic é, basicamente, um framework usado para o desenvolvimento de aplicativo
 - NodeJS
 - Ionic 
 - Cordova
-Para ter certeza se esses recursos estão instalados, basta usar os comandos: node -v, cordova -v e ionic -v. Também é importante ter o gerenciador de pacotes do Node, que é o npm. Par saber se o mesmo está instalado, usa-se o comando npm -v.
+- npm (gerenciador de pacotes do Node) <br>
+
+Para se ter certeza que esses recursos estão instalados, basta usar os comandos: node -v, ionic -v, cordova -v e npm -v. <br>
+
+Caso não estejam, podem ser obtidos da seguinte forma:
+- NodeJS: baixar no próprio site e depois instalar normalmente (link:https://nodejs.org/en/). O NodeJS já possui o npm.
+- Ionic: executar o comando **npm install -g @ionic/cli**
+- Cordova: npm install -g cordova
