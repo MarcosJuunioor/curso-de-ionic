@@ -22,3 +22,12 @@ Comando: **ionic start nome-do-projeto [opção]** <br>
 Há três opções de templates para projetos: blank, tabs e sidemenu.
 
 Para testar o aplicativo, deve-se navegar até a pasta do projeto e executar o comando "ionic serve".
+
+## IONIC CLI - Criando uma página
+O Ionic cli é a ferramenta usada para criação de aplicativos Ionic. No próprio site do framework, há toda a documentação do cli, com os comandos necessário para se criar diversos recursos (alguns já foram usados aqui como "ionic start" e "ionic serve").
+
+Um dos comandos mais importantes é o **ionic generate**, que é usado para criação de recursos para o framework automaticamente, como **páginas, componentes, diretivas, serviços etc.** A sintaxe do mesmo é a seguinte:
+
+ionic generate <type> <name> [options]
+  
+Para criação de uma página, por exemplo, usa-se o comando "ionic generate page".
