@@ -32,7 +32,30 @@ ionic generate <type> <name> [options]
   
 Para criação de uma página, por exemplo, usa-se o comando "ionic generate page".
 
-## Adicionando uma página às abas
+## Adicionando uma página às abas (tabs)
 Primeiramente, é necessário colocar a página dentro da aplicação (pode-se dizer que ela ainda não integra o app). O Ionic usa a ideia de "módulos", onde um componente pode ter uma relação de dependência com outro. Um módulo é semelhante a um escopo, isto é, cada componente tem seu próprio escopo e faz parte de algum. No caso da página criada, para que ela faça parte da aplicação, deverá ser colocada dentro do escopo da mesma. Para isso, deve-se acessar o módulo da página e copiar o seu nome (que é semelhante a "export class NOME-DO-MODULO {}). Em seguida, o nome deve ser colado dentro do módulo da aplicação (um arquivo chamado "app.module.ts"), na parte "imports". Pronto, a página foi adicionada ao app. 
 
 A sintaxe do nome do arquivo de módulo de cada componente segue a seguinte estrutura: nome-do-componente.module.ts.
+
+Feito o primeiro passo, basta ir ao arquivo "tabs-routing.module.ts" (na pasta "tabs") e adicionar a página criada às tabs. Para isso, deve ser colocado **dentro do arquivo** um códio semelhante a este:
+
+      {
+        path: 'NOME-DA-PAGINA',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../NOME-DA-PASTA-DA-PAGINA/NOME-DA-PAGINA.module').then(m => m.NomeDaPaginaPageModule)
+          }
+        ]
+      },
+
+Em seguida, é necessário criar o botão da guia correspondente ao componente adicionado. Isso pode ser feito indo ao arquivo "tabs.page.html" e adicionando o seguinte código dentro do elemento "ion-tab-bar":
+
+    <ion-tab-button tab="NOME-DA-PAGINA">
+      <ion-icon name="square"></ion-icon>
+      <ion-label>Feed</ion-label>
+    </ion-tab-button>
+    
+    
+  
