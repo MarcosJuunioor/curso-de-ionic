@@ -58,4 +58,30 @@ Em seguida, é necessário criar o botão da guia correspondente ao componente a
     </ion-tab-button>
     
     
+  ## Alterando ícones das tabs
+  Para alterar o ícone de uma tab, basta ir ao arquivo tabs.page.html e alterar o atributo "name" da respectiva tab. Os ícones disponíveis estão na documentação do site do ionic, no tópico "icons". 
   
+    <ion-tab-button tab="feed">
+      <ion-icon name="people-outline"></ion-icon>
+      <ion-label>Feed</ion-label>
+    </ion-tab-button>
+    
+
+## Type Script
+### Declaração de variáveis
+Quando se cria um compononente no ionic, também é criado um arquivo "TypeScript" para o mesmo. Neste arquivo, há uma classe com o nome do componente onde se podem criar métodos e atributos para serem usados dentro da página html.
+
+Sintaxe para criação de atributos/variáveis:
+
+**modificador nome_do_atributo:tipo;**
+
+Modificadores: public, private e protected. Tipos: string, number etc.
+
+Para que as variáveis ou métodos possam ser usados dentro de uma página html, basta usar um recurso chamado interpolação: que permite colocar expressões typescript dentor da página. 
+Sintaxe: {{expressão}}
+
+
+
+
+
+
