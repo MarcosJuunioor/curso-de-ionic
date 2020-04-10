@@ -37,7 +37,7 @@ Primeiramente, é necessário colocar a página dentro da aplicação (pode-se d
 
 A sintaxe do nome do arquivo de módulo de cada componente segue a seguinte estrutura: nome-do-componente.module.ts.
 
-Feito o primeiro passo, basta ir ao arquivo "tabs-routing.module.ts" (na pasta "tabs") e adicionar a página criada às tabs. Para isso, deve ser colocado **dentro do arquivo** um códio semelhante a este:
+Feito o primeiro passo, basta ir ao arquivo "tabs-routing.module.ts" (na pasta "tabs") e adicionar a página criada às tabs. Para isso, deve ser colocado **dentro do arquivo** um código semelhante a este:
 
       {
         path: 'NOME-DA-PAGINA',
@@ -77,7 +77,7 @@ Sintaxe para criação de atributos/variáveis:
 
 Modificadores: public, private e protected. Tipos: string, number etc.
 
-Para que as variáveis ou métodos possam ser usados dentro de uma página html, basta usar um recurso chamado interpolação: que permite colocar expressões typescript dentor da página. 
+Para que as variáveis ou métodos possam ser usados dentro de uma página html, basta usar um recurso chamado **interpolação**, que permite colocar expressões typescript dentro da página. 
 Sintaxe: {{expressão}}
 
 
