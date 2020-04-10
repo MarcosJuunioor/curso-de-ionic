@@ -80,6 +80,12 @@ Modificadores: public, private e protected. Tipos: string, number etc.
 Para que as variáveis ou métodos possam ser usados dentro de uma página html, basta usar um recurso chamado **interpolação**, que permite colocar expressões typescript dentro da página. 
 Sintaxe: {{expressão}}
 
+### Funções
+Sintaxe:
+  modificador nomeFuncao():tipoRetorno{
+    return x;
+  }
+
 
 
 
