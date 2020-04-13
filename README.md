@@ -82,12 +82,21 @@ Sintaxe: {{expressão}}
 
 ### Funções
 Sintaxe:
-  modificador nomeFuncao():tipoRetorno{
+
+  modificador nomeFuncao(param1:tipo, param2:tipo):tipoRetorno{
     return x;
   }
+  
+Obs: Declarar o tipo é opcional. Podem-se criar funções e variáveis da mesma forma que em JS.
 
-
-
+### Arquivo page.ts
+Contém o código typescript correspondente à página criada. Nele, há um método que é executado assim que a página é carregada: 
+  
+  ngOnInit() {}
+ 
+Dentro desse método, podem ser colocados códigos que devem ser executados no início do carregamento da página.
+  
+  
 
 
 
