@@ -96,7 +96,13 @@ Contém o código typescript correspondente à página criada. Nele, há um mét
  
 Dentro desse método, podem ser colocados códigos que devem ser executados no início do carregamento da página.
   
-  
+## Imagens e CSS
+### Colocando uma Imagem no Projeto
+Basta criar uma pasta "imagens" no diretório "src/assets". O caminho para referenciar a mesma é o seguinte:
+**assets/imagens/nome-da-imagem.extensao**
+
+### Alterando o CSS
+
 
 
 
