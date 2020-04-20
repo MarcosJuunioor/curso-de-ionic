@@ -106,23 +106,26 @@ Para alterar o css de uma determinada página, basta acessar o arquivo ".scss" d
 
 ## Página Intro
 Primeiro, crie a página que você quer que seja a "raiz" do sistema.
- ionic generate page nome-da-pagina
+
+    ionic generate page nome-da-pagina
  
 Em "app.component.ts", importe a seguinte classe:
- import { Router } from '@angular/router';
+
+    import { Router } from '@angular/router';
  
 Dentro do construtor, adicione:
- private router : Router
+
+    private router : Router
 
 Em seguida, em "initializeApp", coloque o nome da página no trecho de código abaixo.
 
- initializeApp() {
-     this.platform.ready().then(() => {
-       this.router.navigateByUrl('pagename');
-       this.statusBar.styleDefault();
-       this.splashScreen.hide();
-     });
- }
+    initializeApp() {
+       this.platform.ready().then(() => {
+         this.router.navigateByUrl('pagename');
+         this.statusBar.styleDefault();
+         this.splashScreen.hide();
+       });
+    }
 
 
 
