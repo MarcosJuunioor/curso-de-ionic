@@ -102,6 +102,27 @@ Basta criar uma pasta "imagens" no diretório "src/assets". O caminho para refer
 **assets/imagens/nome-da-imagem.extensao**
 
 ### Alterando o CSS
+Para alterar o css de uma determinada página, basta acessar o arquivo ".scss" da mesma e colocar o código desejado. Se a modificação for mais geral, ou seja, para atingir toda a aplicação, o arquivo deve ser o "app.component.scss".
+
+## Página Intro
+Primeiro, crie a página que você quer que seja a "raiz" do sistema.
+ ionic generate page nome-da-pagina
+ 
+Em "app.component.ts", importe a seguinte classe:
+ import { Router } from '@angular/router';
+ 
+Dentro do construtor, adicione:
+ private router : Router
+
+Em seguida, em "initializeApp", coloque o nome da página no trecho de código abaixo.
+
+ initializeApp() {
+     this.platform.ready().then(() => {
+       this.router.navigateByUrl('pagename');
+       this.statusBar.styleDefault();
+       this.splashScreen.hide();
+     });
+ }
 
 
 
