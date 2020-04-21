@@ -126,6 +126,20 @@ Em seguida, em "initializeApp", coloque o nome da página no trecho de código a
          this.splashScreen.hide();
        });
     }
+    
+**OBS:** É comum colocar-se slides na página intro do app explicando o funcionamento do mesmo. Para se criar slides, usam-se os elementos "ion-slides" e "ion-slide". Ex:
+
+    <ion-slides pager>
+      <ion-slide style="background-color: red;">
+        <h1>slide 1</h1>
+      </ion-slide>
+      <ion-slide style="background-color: green;">
+        <h1>Slide 2</h1>
+      </ion-slide>
+      <ion-slide style="background-color: yellow;">
+        <h1>Slide 3</h1>
+      </ion-slide>
+    </ion-slides> 
 
 
 
