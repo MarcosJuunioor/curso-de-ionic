@@ -104,30 +104,22 @@ Basta criar uma pasta "imagens" no diretório "src/assets". O caminho para refer
 ### Alterando o CSS
 Para alterar o css de uma determinada página, basta acessar o arquivo ".scss" da mesma e colocar o código desejado. Se a modificação for mais geral, ou seja, para atingir toda a aplicação, o arquivo deve ser o "app.component.scss".
 
-## Página Intro
-Primeiro, crie a página que você quer que seja a "raiz" do sistema.
+## Navegação e Rotas
+Para navegar para uma página do app, é necessário primeiro criar uma rota para mesma. Para isso, deve-se ir ao arquivo "app-routing.module.ts" e adicionar a rota da respectiva página conforme o exemplo abaixo: 
 
-    ionic generate page nome-da-pagina
- 
-Em "app.component.ts", importe a seguinte classe:
+      const routes: Routes = [
+        {
+          path: 'rota-da-pagina',
+          loadChildren: () => import('./pasta-da-pagina/nome-da-pagina.module').then(m => m.NomeDaPaginaPageModule)
+        },
+      ];
 
-    import { Router } from '@angular/router';
- 
-Dentro do construtor, adicione:
+Em "import()", deve-se passar como parâmetro o caminho interno do "arquivo.module" da página. 
 
-    private router : Router
+**OBS:** Para definir uma página como sendo a raiz da aplicação (ou de algum outro componente), "path" deve receber um caminho vazio.
+Ex: path:''.
 
-Em seguida, em "initializeApp", coloque o nome da página no trecho de código abaixo.
-
-    initializeApp() {
-       this.platform.ready().then(() => {
-         this.router.navigateByUrl('pagename');
-         this.statusBar.styleDefault();
-         this.splashScreen.hide();
-       });
-    }
-    
-**OBS:** É comum colocar-se slides na página intro do app explicando o funcionamento do mesmo. Para se criar slides, usam-se os elementos "ion-slides" e "ion-slide". Ex:
+**OBS2:** É comum colocar-se slides na página raiz (intro) do app explicando o funcionamento do mesmo. Para se criar slides, usam-se os elementos "ion-slides" e "ion-slide". Ex:
 
     <ion-slides pager>
       <ion-slide style="background-color: red;">
@@ -140,7 +132,4 @@ Em seguida, em "initializeApp", coloque o nome da página no trecho de código a
         <h1>Slide 3</h1>
       </ion-slide>
     </ion-slides> 
-
-
-
 
